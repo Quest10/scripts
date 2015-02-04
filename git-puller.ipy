@@ -1,0 +1,18 @@
+#! /usr/bin/ipython
+#v.0.1
+#pull all git directories in a development folder
+#I use it in the  start up of session
+
+import os
+
+dev_folder = "/home/gerardo/Proyectos"
+
+%cd $dev_folder
+folder = !ls
+
+for i in folder:
+    os.chdir(i)
+    #original solution from http://stackoverflow.com/questions/2044574/determine-if-directory-is-under-git-control
+    if os.path.isdir(".git") or os.system('git rev-parse 2> /dev/null > /dev/null') == 0:
+       !git pull
+    os.chdir("..")
