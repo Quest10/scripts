@@ -1,1 +1,3 @@
 * Soluciones rápidas y sucias a problemas concretos.
+- sys_graph: Se encarga(rá) de generar un archivo gráfico a partir de las estadísticas de sar
+- git-puller: Actualiza todos los directorios que se encuentran bajo el control de git
